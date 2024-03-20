@@ -1,25 +1,19 @@
 import express from "express";
-import UsuarioModel from "../models/userModel.js";
-
+import usersControllers from "../controllers/usersControllers.js";
 const router = express.Router();
 
 //Traer los usuarios
-router.get("/users", async (req, res) => {
-  try {
-    const usuarios = await UsuarioModel.find();
-    res.json(usuarios);
-    console.log(usuarios)
-  } catch (error) {
-    console.log(error);
-  }
-});
+
+router.get("/users", usersControllers.getAllUsers);
 
 //Traer un usuario
 
-//Crear un usuario
+//registro de un usuario
+router.post("/register", usersControllers.registroUsuario);
 
 //Actualizar un usuario
 
 //Eliminar un usuario
+router.delete("/user/:id", usersControllers.deleteUser);
 
 export default router; // exportamos el router para poder usarlo en otro archivo

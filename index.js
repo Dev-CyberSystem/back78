@@ -16,13 +16,13 @@ app.use(express.json());
 app.use("/api", userRouter);
 
 // endpoint de prueba
-//http://localhost:8080/api/users
+//http://localhost:8080/api/register
 
 const initApp = () => {
   try {
     connectDB();
     app.listen(PORT, () => {
-      console.log(`Servidores iniciado en el puerto ${PORT}`);
+      console.log(`Servidor iniciado en el puerto ${PORT}`);
     });
   } catch (error) {
     console.log(error);
