@@ -15,6 +15,10 @@ const usuariosSchema = new Schema(
       type: String,
       required: true,
     },
+    admin: {
+      type: Boolean,
+      default: false,
+    },
   },
   { versionKey: false }
 );
