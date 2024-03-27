@@ -16,7 +16,7 @@ router.post("/register", usersControllers.registroUsuario);
     router.patch("/user/:id", usersControllers.updateUser);
 
     //Eliminar un usuario
-router.delete("/user/:id", usersControllers.deleteUser);
+router.delete("/delete/user/:id", usersControllers.deleteUser);
 
 //login de usuario
 
